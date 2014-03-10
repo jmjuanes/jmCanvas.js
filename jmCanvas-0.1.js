@@ -43,7 +43,7 @@ function jmCanvas(nombre, anchura, altura)
 				{
 					//Establecemos la altura y la anchura del canvas
 					this.id.width  = this.width;
-					this.id.height = this.heigth;
+					this.id.height = this.height;
 				}
 			}
 		}
