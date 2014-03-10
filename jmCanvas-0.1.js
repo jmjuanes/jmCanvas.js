@@ -7,18 +7,17 @@
  *
  **/
 
-function jmCanvas(nombre, anchura, altura)
+function jmCanvas(n, w, h)
 {
-	// nombre:  Nombre del canvas (string)
-	// anchura: Anchura del canvas (entero)
-	// altura:  Altura del canvas (entero)
+	// n:  Canvas name (string)
+	// w:  Canvas width (int)
+	// h:  Canvas height (int)
 	
-	//Identificadores del canvas
-	this.id = null;        //ID del canvas
-	this.ctx = null;       //CTX del canvas
-	this.name = nombre;    //Etiqueta name del canvas
-	this.width = anchura;  //Anchura del canvas
-	this.height = altura;  //Altura del canvas
+	this.id = null;    //Canvas ID
+	this.ctx = null;   //Canvas CTX
+	this.name = n;     //Canvas name
+	this.width = w;    //Canvas width
+	this.height = h;   //Canvas height
 	
 	//Funcion inicial
 	this.Start = function()
