@@ -17,8 +17,8 @@ function jmCanvas(nombre, anchura, altura)
 	this.id = null;        //ID del canvas
 	this.ctx = null;       //CTX del canvas
 	this.name = nombre;    //Etiqueta name del canvas
-	this.anc = anchura;    //Anchura del canvas
-	this.alt = altura;     //Altura del canvas
+	this.width = anchura;  //Anchura del canvas
+	this.height = altura;  //Altura del canvas
 	
 	//Funcion inicial
 	this.Start = function()
@@ -42,8 +42,8 @@ function jmCanvas(nombre, anchura, altura)
 				else
 				{
 					//Establecemos la altura y la anchura del canvas
-					this.id.width  = this.anc;
-					this.id.height = this.alt;
+					this.id.width  = this.width;
+					this.id.height = this.heigth;
 				}
 			}
 		}
@@ -67,7 +67,7 @@ function jmCanvas(nombre, anchura, altura)
 	//Funcion que borra toda la pantalla
 	this.DeleteAll = function()
 	{
-		this.ctx.clearRect(0, 0, this.anc, this.alt);
+		this.ctx.clearRect(0, 0, this.width, this.height);
 	};
 	
 	//Funcion para posicionar una imagen en el canvas
