@@ -21,7 +21,7 @@ function jmCanvas(nombre, anchura, altura)
 	this.alt = altura;     //Altura del canvas
 	
 	//Funcion inicial
-	this.Iniciar = function()
+	this.Start = function()
 	{		
 		//Comprobamos si esta disponible
 		if(document.getElementById(this.name))
@@ -55,7 +55,7 @@ function jmCanvas(nombre, anchura, altura)
 	};
 	
 	//Funcion que borra un recuadro de la pantalla
-	this.Borrar = function(px, py, w, h)
+	this.Delete = function(px, py, w, h)
 	{
 		// px: posicion x
 		// py: posicion y
@@ -65,13 +65,13 @@ function jmCanvas(nombre, anchura, altura)
 	};
 	
 	//Funcion que borra toda la pantalla
-	this.BorrarTodo = function()
+	this.DeleteAll = function()
 	{
 		this.ctx.clearRect(0, 0, this.anc, this.alt);
 	};
 	
 	//Funcion para posicionar una imagen en el canvas
-	this.Imagen = function(img, px, py, af)
+	this.Image = function(img, px, py, af)
 	{
 		// img : imagen a posicionar
 		// px  : posicion x de la imagen
@@ -93,7 +93,7 @@ function jmCanvas(nombre, anchura, altura)
 	};
 	
 	//Función para rotar una imagen y situarla
-	this.ImagenRotar = function(img, px, py, ang, af)
+	this.ImageRotate = function(img, px, py, ang, af)
 	{
 		// img : imagen a posicionar
 		// px  : posicion x de la imagen
@@ -126,7 +126,7 @@ function jmCanvas(nombre, anchura, altura)
 	};
 	
 	//Función para posicionar texto
-	this.Texto = function(txt, fuente, color, tam, align, px, py)
+	this.Text = function(txt, fuente, color, tam, align, px, py)
 	{
 		// txt    : texto
 		// color  : color del texto
@@ -149,7 +149,7 @@ function jmCanvas(nombre, anchura, altura)
 	};
 	
 	//Función que dibuja un rectangulo
-	this.Rectangulo = function(color, px, py, w, h, af)
+	this.Rectangle = function(color, px, py, w, h, af)
 	{
 		// color   : color del rectangulo
 		// px y py : posicion x e y del rectangulo
@@ -172,7 +172,7 @@ function jmCanvas(nombre, anchura, altura)
 	};
 	
 	//Función que crea una recta
-	this.Recta = function(color, tam, ox, oy, fx, fy, af)
+	this.Rect = function(color, tam, ox, oy, fx, fy, af)
 	{
 		// color   : color de la recta
 		// tam     : tamano de la recta
