@@ -20,8 +20,8 @@ Where **name** is the name of your canvas element and **width** and **height** a
 
 Thats all! Now you can draw text, rects, rectangles, etc.. in your canvas.
 
-##Reference
-Read the [REFERENCE.md](REFERENCE.md) for more information about the functions included in **jmCanvas.js**. 
+##Manual
+Read the [MANUAL.md](MANUAL.md) for more information about the functions included in **jmCanvas.js**. 
 
 ##Demostration
 I will upload demostrations in the [demo/](demo/) folder.
