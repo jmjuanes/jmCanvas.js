@@ -1,10 +1,7 @@
 Release notes 0.1
-
 #jmCanvas.js (BETA)
 
-**jmCanvas.js** is a very simple JavaScript script for draw in a HTML5 Canvas element.
-
-Actual version: 0.1
+**jmCanvas.js** is a very simple JavaScript script for draw in a HTML5 Canvas element. It includes all functions for draw rectangles, circles, lines, text, etc...
 
 ##Release notes for this version
 
@@ -27,13 +24,13 @@ Where **name** is the name of your canvas element and **width** and **height** a
 Thats all! Now you can draw text, rects, rectangles, etc.. in your canvas.
 
 ###API
-Read [reference.md](docs/reference.md) for more information about the functions included in **jmCanvas.js**. 
+Read the [API Documentation](api/readme.md) for more information about the functions included in **jmCanvas.js**. 
 
 ###Demostration
-I will upload demostrations in [demo/](demo/)..
+I will upload demostrations in [demo/](demo/).
 
 ##License
-Copyright 2014 Jose Miguel Juanes. **jmCanvas.js** is under [Apache 2.0 License](LICENSE).
+Copyright 2014 Jose Miguel Juanes. **jmCanvas.js** is under the [Apache 2.0 License](LICENSE).
 
 ##Contact
 For more information, please [contact with me](http://www.jmjuanes.com.es/contacto).
