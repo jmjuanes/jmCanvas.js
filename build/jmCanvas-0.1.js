@@ -91,7 +91,7 @@ function jmCanvas(n, w, h)
 		this.ctx.globalAlpha = 1;
 	};
 	
-	//Función para rotar una imagen y situarla
+	//Funciï¿½n para rotar una imagen y situarla
 	this.ImageRotate = function(img, px, py, ang, af)
 	{
 		// img : imagen a posicionar
@@ -124,7 +124,7 @@ function jmCanvas(n, w, h)
 		this.ctx.globalAlpha = 1;
 	};
 	
-	//Función para posicionar texto
+	//Funciï¿½n para posicionar texto
 	this.Text = function(txt, fuente, color, tam, align, px, py)
 	{
 		// txt    : texto
@@ -147,7 +147,7 @@ function jmCanvas(n, w, h)
 		this.ctx.fillText(txt, px, py);
 	};
 	
-	//Función que dibuja un rectangulo
+	//Funciï¿½n que dibuja un rectangulo
 	this.Rectangle = function(color, px, py, w, h, af)
 	{
 		// color   : color del rectangulo
@@ -170,7 +170,7 @@ function jmCanvas(n, w, h)
 		this.ctx.globalAlpha = 1;
 	};
 	
-	//Función que crea una recta
+	//Funciï¿½n que crea una recta
 	this.Rect = function(color, tam, ox, oy, fx, fy, af)
 	{
 		// color   : color de la recta
