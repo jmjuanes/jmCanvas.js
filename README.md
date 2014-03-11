@@ -21,7 +21,7 @@ c.Start();
 ```
 Where **name** is the name of your canvas element and **width** and **height** are the desired width and heigth of your canvas.
 
-Thats all! Now you can draw text, rects, rectangles, etc.. in your canvas.
+Thats all! Now you can draw text, lines, rectangles, etc.. in your canvas.
 
 ###API
 Read the [API Documentation](api/readme.md) for more information about the functions included in **jmCanvas.js**. 
