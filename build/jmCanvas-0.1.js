@@ -19,28 +19,21 @@ function jmCanvas(n, w, h)
 	this.width = w;    //Canvas width
 	this.height = h;   //Canvas height
 	
-	//Funcion inicial
+	//Starting function
 	this.Start = function()
 	{		
-		//Comprobamos si esta disponible
 		if(document.getElementById(this.name))
 		{
-			//Guardamos el ID
 			this.id = document.getElementById(this.name);
-			
-			//Comprobamos si podemos inicializar el canvas
 			if (this.id.getContext)
 			{
-				//Si lo hemos podido inicializar
 				this.ctx = canvas.getContext('2d');
 				if(this.ctx == null)
 				{
-					//Avisamos de que se ha producido un error
-					alert('Se ha producido un error al iniciar el canvas.');
+					alert('Error starting the canvas.');
 				}
 				else
 				{
-					//Establecemos la altura y la anchura del canvas
 					this.id.width  = this.width;
 					this.id.height = this.height;
 				}
@@ -48,145 +41,178 @@ function jmCanvas(n, w, h)
 		}
 		else
 		{
-			//Si no esta disponible
-			alert("Error al iniciar el canvas " + n + ".");
+			//If canvas not found
+			alert("Canvas '" + n + "' not found.");
 		}
 	};
 	
-	//Funcion que borra un recuadro de la pantalla
+	//Clear a rectangle in the canvas
 	this.Delete = function(px, py, w, h)
 	{
-		// px: posicion x
-		// py: posicion y
-		// w : anchura
-		// h : altura
+		// px: position x
+		// py: position y
+		// w : width
+		// h : height
 		this.ctx.clearRect(px, py, w, h);
 	};
 	
-	//Funcion que borra toda la pantalla
+	//Clear all the canvas
 	this.DeleteAll = function()
 	{
 		this.ctx.clearRect(0, 0, this.width, this.height);
 	};
 	
-	//Funcion para posicionar una imagen en el canvas
+	//Put an image in the canvas
 	this.Image = function(img, px, py, af)
 	{
-		// img : imagen a posicionar
-		// px  : posicion x de la imagen
-		// py  : posicion y  de la imagen
-		// af  : alfa a aplicar
+		// img : image
+		// px  : position x
+		// py  : position y
+		// af  : alpha
 		
-		//Activamos el alfa
+		//Change the alpha
 		this.ctx.globalAlpha = af;
-		//Iniciamos
+		
+		//Start
 		this.ctx.beginPath();
-		//Situamos la imagen
+		
+		//Put the image
 		this.ctx.drawImage(img,px,py);
-		//Cerramos
+		
+		//Close
 		this.ctx.closePath();
-		//Aplicamos
 		this.ctx.fill();
-		//Devolvemos el alfa a su valor inicial
+		
+		//Restore the alpha
 		this.ctx.globalAlpha = 1;
 	};
 	
-	//Funci�n para rotar una imagen y situarla
+	//Rotate and put an image
 	this.ImageRotate = function(img, px, py, ang, af)
 	{
-		// img : imagen a posicionar
-		// px  : posicion x de la imagen
-		// py  : posicion y de la imagen
-		// ang : angulo a rotar (en grados)
-		// af  : alfa a aplicar
+		// img : image
+		// px  : position x
+		// py  : position y
+		// ang : angle (in degrees)
+		// af  : alpha
 		
+		//Radian
 		var rad = Math.PI/180;
 		
-		//Guardamos el estado actual
+		//Save the actual state
 		this.ctx.save();
-		//Cambiamos el alfa
+		
+		//Change the alpha
 		this.ctx.globalAlpha = af;
-		//Iniciamos
+		
+		//Start
 		this.ctx.beginPath();
-		//Trasladamos el centro de la rotacion al centro de la imagen
+		
+		//Translate
 		this.ctx.translate(px +(img.width/2) ,py +(img.height/2));
-		//Rotamos
+		//Rotate the image
 		this.ctx.rotate(rad*ang);
-		//Situamos la imagen
+		//Put the image
 		this.ctx.drawImage(img, -(img.width/2), -(img.height/2));
-		//Guardamos
+		
+		//Close
 		this.ctx.closePath();
-		//Aplicamos
 		this.ctx.fill();
-		//Devolvemos al estado anterior
+		
+		//Restore
 		this.ctx.restore();
-		//Reiniciamos el alfa
+		
+		//Restore the alpha
 		this.ctx.globalAlpha = 1;
 	};
 	
-	//Funci�n para posicionar texto
-	this.Text = function(txt, fuente, color, tam, align, px, py)
+	//Put text in the canvas
+	this.Text = function(txt, font, color, size, align, px, py)
 	{
-		// txt    : texto
-		// color  : color del texto
-		// fuente : fuente
-		// tam    : tamano del texto (entero)
-		// align  : alineacion del texto(center|end|left|right|start)
-		// px     : posicion x del texto
-		// py     : posicion y del texto
+		// txt    : text
+		// color  : color
+		// font   : font
+		// size   : text size (int)
+		// align  : text align (center|end|left|right|start)
+		// px     : text x position
+		// py     : text y position
 		
 		//Baseline
 		this.ctx.textBaseline = 'top';
-		//Definimos el color
+		
+		//Color set
 		this.ctx.fillStyle = color;
-		//Definimos el estilo del texto
-		this.ctx.font = tam + 'px ' + fuente;
-		//Alineacion del texto
+		
+		//Font
+		this.ctx.font = size + 'px ' + font;
+		
+		//Text align
 		this.ctx.textAlign = align; 
-		//Posicionamos
+		
+		//Put the text
 		this.ctx.fillText(txt, px, py);
 	};
 	
-	//Funci�n que dibuja un rectangulo
+	//Draw a rectangle
 	this.Rectangle = function(color, px, py, w, h, af)
 	{
-		// color   : color del rectangulo
-		// px y py : posicion x e y del rectangulo
-		// w y h   : anchura y altura del rectangulo
-		// af      : alfa del rectangulo
+		// color   : color
+		// px , py : rectangle position x and y
+		// w , h   : rectangle width and height
+		// af      : rectangle alpha
 		
-		//Cambiamos el alfa
+		//Change the alpha
 		this.ctx.globalAlpha = af;
-		//Establecemos el color
+		
+		//Color set
 		this.ctx.fillStyle = color;
-		//Iniciamos
+		
+		//Start
 		this.ctx.beginPath();
-		//Creamos el rectangulo
+		
+		//Creates the rectangle
 		this.ctx.rect(px, py, w, h);
-		//Cerramos
+		
+		//Close
 		this.ctx.closePath();
 		this.ctx.fill();
-		//Devolvemos el alfa a 1
+		
+		//Restore the alpha
 		this.ctx.globalAlpha = 1;
 	};
 	
-	//Funci�n que crea una recta
-	this.Rect = function(color, tam, ox, oy, fx, fy, af)
+	//Draw a line
+	this.Line = function(color, size, ox, oy, fx, fy, af)
 	{
-		// color   : color de la recta
-		// tam     : tamano de la recta
-		// ox y oy : posicion x e y original de la recta
-		// fx y fy : posicion x e y finales de la recta
-		// af      : alfa de la recta
+		// color   : color
+		// size    : line size
+		// ox , oy : starting point of the line
+		// fx , fy : end point of the line
+		// af      : alpha
 		
+		//Change the alpha
 		this.ctx.globalAlpha = af;
+		
+		//Start
 		this.ctx.beginPath();
-		this.ctx.lineWidth = tam;
+		
+		//Set the size
+		this.ctx.lineWidth = size;
+		
+		//Starting point
 		this.ctx.moveTo(ox,oy);
+		
+		//Draw the line
 		this.ctx.lineTo(fx,fy);
+		
+		//Set the color
 		this.ctx.strokeStyle = color;
+		
+		//Close
 		this.ctx.stroke();
 		this.ctx.closePath();
+		
+		//Restore the alpha
 		this.ctx.globalAlpha = 1;
 	};
 
