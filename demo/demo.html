@@ -1,22 +1,23 @@
 <html>
 <head>
-	<!-- Llamamos a jmCanvas -->
-	<script type="text/javascript" src="../jmCanvas-0.1.js"></script>
+	<!-- Call to jmCanvas.js -->
+	<script type="text/javascript" src="../build/jmCanvas-0.1.js"></script>
 </head>
 <body>
 
-<!-- Elemento canvas -->
+<!-- Canvas element -->
 <canvas id="canvas"></canvas>
 
+<!-- JavaScript code -->
 <script type="text/javascript">
 	
-	//Creamos un nuevo canvas de dimension 500x500
+	//New Canvas 500x500
 	var a = new jmCanvas('canvas', 500, 500);
 	
-	//Lo iniciamos
+	//Starting the canvas
 	a.Start();
 	
-	//Ahora podemos dibujar sobre el canvas :)
+	//Now we can draw in the canvas :)
 	a.Rectangle('#EEEEEE', 20, 20, 200, 200, 1);
 	a.Rect('#AAA333', 10, 50, 50, 450, 450, 1);
 	a.Text('Hola', 'Arial', '#000000', 30, 'center', 250, 250);
