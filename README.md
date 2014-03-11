@@ -1,13 +1,32 @@
-#jmCanvas.js
+Release notes 0.1
+
+#jmCanvas.js (BETA)
 
 **jmCanvas.js** is a very simple JavaScript script for draw in a HTML5 Canvas element.
 
-You have in [DOCS](/docs) all the documentation for install and use this library.
+Actual version: 0.1
+
+##Release notes for this version
 
 ###Installation
-Read [install.md](docs/install.md) for install **jmCanvas.js** into your web project.
+First, you must add jmCanvas to your HTML document:
+```html
+<script type="text/javascript" src="jmCanvas-X.Y.js"></script>
+```
+Where **X.Y** is the current version of **jmCanvas.js**. Remember that you need a Canvas element in the *body* of your document:
+```html
+<canvas id='name'></canvas>
+```
+Next, for start your canvas you must add these JavaScript code:
+```javascript
+var c = new jmCanvas('name', width, height);
+c.Start();
+```
+Where **name** is the name of your canvas element and **width** and **height** are the desired width and heigth of your canvas.
 
-###References
+Thats all! Now you can draw text, rects, rectangles, etc.. in your canvas.
+
+###API
 Read [reference.md](docs/reference.md) for more information about the functions included in **jmCanvas.js**. 
 
 ###Demostration
