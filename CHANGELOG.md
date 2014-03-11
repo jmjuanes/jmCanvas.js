@@ -1,4 +1,4 @@
 #Changelog
 
-##0.1 (Current version)
--Create jmCanvas.js
+###0.1 (Current version)
+- Create jmCanvas.js
