@@ -4,13 +4,13 @@
 
 You have in the [DOCS](/docs) folder all the documentation for install and use this library.
 
-##Installation
+###Installation
 Read the [install.md](docs/install.md) file for install **jmCanvas.js** into your web project.
 
-##References
+###References
 Read the [reference.md](docs/reference.md) file for more information about the functions included in **jmCanvas.js**. 
 
-##Demostration
+###Demostration
 I will upload demostrations in the [demo/](demo/) folder.
 
 ##License
