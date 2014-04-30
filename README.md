@@ -23,9 +23,6 @@ Where **name** is the name of your canvas element and **width** and **height** a
 
 Thats all! Now you can draw text, lines, rectangles, etc.. in your canvas.
 
-###API
-Read the [API Documentation](api/readme.md) for more information about the functions included in **jmCanvas.js**. 
-
 ###Demostration
 I will upload demostrations in [demo/](demo/).
 
@@ -33,6 +30,6 @@ I will upload demostrations in [demo/](demo/).
 Copyright 2014 Jose Miguel Juanes. **jmCanvas.js** is under the [Apache 2.0 License](LICENSE).
 
 ##Contact
-For more information, please [contact with me](http://www.jmjuanes.com.es/contacto).
+For more information, please [contact with me](http://www.jmjuanes.com.es/sobremi).
 
 :)
