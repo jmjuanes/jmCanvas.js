@@ -27,7 +27,7 @@ function jmCanvas(n, w, h)
 			this.id = document.getElementById(this.name);
 			if (this.id.getContext)
 			{
-				this.ctx = canvas.getContext('2d');
+				this.ctx = this.id.getContext('2d');
 				if(this.ctx == null)
 				{
 					alert('Error starting the canvas.');
