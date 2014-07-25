@@ -30,6 +30,6 @@ I will upload demostrations in [demo/](demo/).
 Copyright 2014 Jose Miguel Juanes. **jmCanvas.js** is under the [Apache 2.0 License](LICENSE).
 
 ##Contact
-For more information, please [contact with me](http://www.jmjuanes.com.es/sobremi).
+For more information, please [contact with me](http://www.jmjuanes.com.es/).
 
 :)
