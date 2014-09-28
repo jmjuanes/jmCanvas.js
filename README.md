@@ -8,9 +8,11 @@ Release notes 0.1
 ###Installation
 First, you must add jmCanvas to your HTML document:
 ```html
-<script type="text/javascript" src="jmCanvas-X.Y.js"></script>
+<script type="text/javascript" src="https://jmjuanes.github.io/jmCanvas.js/jmCanvas.js"></script>
 ```
-Where **X.Y** is the current version of **jmCanvas.js**. Remember that you need a Canvas element in the *body* of your document:
+Where **https://jmjuanes.github.io/jmCanvas.js/** is the url to this repo. You can change this if you have a local copy of **jmCanvas.js**. 
+
+Remember that you need a Canvas element in the *body* of your document:
 ```html
 <canvas id='name'></canvas>
 ```
@@ -29,7 +31,6 @@ I will upload demostrations in [demo.html](demo.html).
 ##License
 Copyright 2014 Jose Miguel Juanes. **jmCanvas.js** is under the [Apache 2.0 License](LICENSE).
 
-##Contact
-For more information, please [contact with me](http://www.jmjuanes.com.es/).
+[www.jmjuanes.com.es](http://www.jmjuanes.com.es/).
 
 :)
