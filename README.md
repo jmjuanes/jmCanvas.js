@@ -29,7 +29,7 @@ Thats all! Now you can draw text, lines, rectangles, etc.. in your canvas.
 I will upload demostrations in [demo.html](demo.html).
 
 ##License
-Copyright 2014 Jose Miguel Juanes. **jmCanvas.js** is under the [Apache 2.0 License](LICENSE).
+Copyright 2014 Jose Miguel Juanes. **jmCanvas.js** is under the [MIT License](LICENSE).
 
 [www.jmjuanes.com.es](http://www.jmjuanes.com.es/).
 
