@@ -31,6 +31,6 @@ I will upload demostrations in [demo.html](demo.html).
 ##License
 Copyright 2014 Jose Miguel Juanes. **jmCanvas.js** is under the [MIT License](LICENSE).
 
-[www.jmjuanes.com.es](http://www.jmjuanes.com.es/).
+[www.jmjuanes.es](http://www.jmjuanes.es/).
 
 :)
